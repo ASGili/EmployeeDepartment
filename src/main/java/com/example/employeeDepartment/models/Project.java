@@ -1,6 +1,7 @@
 package com.example.employeeDepartment.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,10 +25,18 @@ public class Project {
     public Project() {
     }
 
-    public Project(String name, int duration, List<Assignment> assignments) {
+    public Project(String name, int duration) {
         this.name = name;
         this.duration = duration;
-        this.assignments = assignments;
+        this.assignments = new ArrayList<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

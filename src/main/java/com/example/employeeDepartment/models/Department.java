@@ -31,6 +31,14 @@ public class Department {
         this.employees = new ArrayList<>();
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
